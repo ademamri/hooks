@@ -4,13 +4,18 @@ import Navbar from './components/Navbar';
 import Listemovies from './components/Listemovies';
 import Modal from './components/Modal';
 import { useState } from 'react';
+import Login from './components/Login';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
 
 function App() {
-  const [search, setsearch] = useState("")
   return (
     <div className="App">
-    <Navbar setsearch={setsearch} />
-    <Listemovies search={search} />
+     
+    <Routes>
+      <Route path='/' element={<Login />}/>
+      <Route path='/home' element={<Home  />}/>
+    </Routes>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const Navbar = ({setsearch}) => {
+  const Navigate=useNavigate()
   return (
     <div className='nav'>
       <h1>MOVIES </h1>
@@ -12,7 +14,8 @@ const Navbar = ({setsearch}) => {
       <img src="" alt="" />
       </a>
     </div>  
-    <input  type="button" value="add movies" />
+   <div className='but'> <input  type="button" value="add movies" />
+    <input onClick={()=>Navigate("/")} type="button" value="log out" /></div>
 </div>
     </div>
   )
